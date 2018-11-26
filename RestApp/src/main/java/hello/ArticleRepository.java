@@ -15,4 +15,6 @@ public interface ArticleRepository extends PagingAndSortingRepository<Article, S
 	public Page<Book> findByName(@Param("name") String name, Pageable page);
 	 
 	public List<Article> findByPrice(int price);
+	public List<Article> findByMessage(String message, Pageable page);
 }
+
