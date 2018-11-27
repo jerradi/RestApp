@@ -1,26 +1,32 @@
-package hello;
+package app.repos;
 
+import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@Document(indexName = "book", type = "cd")
-public class Article {
+@Document(indexName = "library", type = "book")
+public class Book {
 
 	@Id
 	@JsonProperty("_id")
 	private String id;
- 
 
-	private String name, message, price;
+	private String name, message, price, author;
 
-	public Article() {
+	public Book() {
 		// TODO Auto-generated constructor stub
 	}
-	
-
-	public Article(String id, String name, String message, String price) {
+	//
+public String getAuthor() {
+	return author;
+}
+public void setAuthor(String author) {
+	this.author = author;
+}
+	public Book(String id, String name, String message, String price) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -29,8 +35,8 @@ public class Article {
 	}
 
 
-	public Article(String name, String message, String price) {
-		super(); 
+	public Book(String name, String message, String price) {
+		super();
 		this.name = name;
 		this.message = message;
 		this.price = price;

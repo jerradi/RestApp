@@ -1,5 +1,5 @@
 
-package hello;
+package app.conf;
 
 import java.net.InetAddress;
 

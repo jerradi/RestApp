@@ -1,4 +1,4 @@
-package hello;
+package app.repos;
 
 import org.springframework.data.rest.core.config.Projection;
 
