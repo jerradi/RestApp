@@ -13,12 +13,26 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
+import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
+import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
+import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
 
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "hello")
+@EnableElasticsearchRepositories(basePackages = "app.repos")
 public class EsConfig {
 
-	 
+	@Bean
+	public RepositoryRestConfigurer repositoryRestConfigurer() {
+
+		return new RepositoryRestConfigurerAdapter() {
+
+			@Override
+			public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
+				config.setBasePath("/api");
+			}
+		};
+	}
+
  
  
 	@Bean

@@ -44,7 +44,7 @@ public class WebController {
 	public String triggerGeneralError() {
 		return "index";
 	}
-	@GetMapping(value = { "/ageneral_error" },produces={MediaType.APPLICATION_JSON_VALUE}  )
+	@GetMapping(value = { "/errors/ageneral_error" },produces={MediaType.APPLICATION_JSON_VALUE}  )
 	public String triggerAnotherGeneralError() {
 		return "index";
 	}

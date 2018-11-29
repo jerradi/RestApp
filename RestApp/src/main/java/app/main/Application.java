@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @SpringBootApplication
 //@EnableAutoConfiguration(exclude = {ErrorMvcAutoConfiguration.class})
  
-@ComponentScan(basePackages= {"app.conf", "app.controllers"})
+@ComponentScan(basePackages= {"app.conf", "app.controllers" })
 
 public class Application {
 	public static void main(String[] args) {
