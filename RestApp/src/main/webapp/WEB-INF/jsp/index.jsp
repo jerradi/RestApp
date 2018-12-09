@@ -11,6 +11,6 @@ ccc
 <body>
 <h1>INDEX</h1>
 </body> 
-c:url is equivalent to response.encodeURL() 
+c:url is equivalent to response.encodeURL()   awah
 <script type="text/javascript"     src="<c:url value="/rcss/js/restApp.js" />"    ></script>
 </html>

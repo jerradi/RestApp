@@ -25,8 +25,8 @@
 		</dependency>
 
 		<!-- <dependency> -->
-		<!-- <groupId>org.springframework.boot</groupId> -->
-		<!-- <artifactId>spring-boot-starter-web</artifactId> -->
+			<!-- <groupId>org.springframework.boot</groupId> -->
+			<!-- <artifactId>spring-boot-starter-web</artifactId> -->
 		<!-- </dependency> -->
 
 		<dependency>
@@ -37,17 +37,18 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
-
- <dependency>
+<!--   jjj -->
+		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId> 
+			<artifactId>jstl</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>taglibs</groupId>
-			<artifactId>standard</artifactId> 
-			  <version>1.1.2</version>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.elasticsearch.client</groupId>
 			<artifactId>transport</artifactId>
@@ -58,43 +59,39 @@
 			<artifactId>transport-netty4-client</artifactId>
 		</dependency>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
 
 
+		<!-- spring security -->
 
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<!-- tomcat server restarts after successful build -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
 
+		<!-- because jstl was not enough -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.thymeleaf</groupId> -->
+		<!-- <artifactId>thymeleaf</artifactId> -->
+		<!-- </dependency> -->
 	</dependencies>
-
 	<build>
-	 <resources>
-            <resource>
-                <directory>src/main/resdources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
+		<resources>
+			<resource>
+				<directory>src/main/resdources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

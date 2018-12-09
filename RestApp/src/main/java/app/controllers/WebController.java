@@ -34,10 +34,16 @@ public class WebController {
 		return "index";
 	}
 
-	@GetMapping(value = { "/server_error" })
+	@GetMapping(value = { "/server_error"   })
 	public String triggerServerError() {
 		"ser".charAt(30);
 		return "index";
+	}
+	
+	@GetMapping(value = {  "/login"})
+	public String login() {
+		 
+		return "login";
 	}
 
 	@PostMapping(value = { "/general_error" }  )
